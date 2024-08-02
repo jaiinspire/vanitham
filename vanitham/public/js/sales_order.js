@@ -23,7 +23,7 @@ frappe.ui.form.on("Sales Order", {
 });
 
 frappe.ui.form.on("Sales Taxes and Charges", {
-    add:(frm,cdt,cdn)=>{
+    taxes_add:(frm,cdt,cdn)=>{
         let d = locals[cdt][cdn]
         d.cost_center = frm.doc.cost_center
         console.log(d.cost_center)
