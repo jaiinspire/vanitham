@@ -8,15 +8,15 @@ requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]
 
-dependencies = [
-    # "frappe~=15.0.0" # Installed and managed by bench.
-]
+# DO NOT declare frappe here
+dependencies = []
 
 [build-system]
 requires = ["flit_core >=3.4,<4"]
 build-backend = "flit_core.buildapi"
 
+[tool.bench]
+frappe-dependencies = { frappe = ">=15.0.0,<16.0.0" }
+
+# Optional: only for developer mode
 [tool.bench.dev-dependencies]
-# Add only dev-only Python libs if needed
-# example:
-# pytest = "~=7.4"
